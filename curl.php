@@ -1,6 +1,7 @@
 <?php
 # Author: Shailender Singh
-######################################### 1st Question Solution ####################################
+# Blog Url : gatuteck.blogspot.in
+# Stack overflow,twitter,facebook etc  Profile name : gatuteck
 $url="https://mobile.twitter.com/session/new ";
 //Delay in calling the URL
 define('MinDelayTime', 2);
@@ -40,17 +41,4 @@ function Get_Curl($url) {
     curl_close($ch);    // Closing cURL
     return $data;   // Returning html content of site
 }
-?>
-
-<?php
-	################################################ 2 nd Question Solution ######################################
-	$metas = $doc->getElementsByTagName('meta');
-	for ($i = 0; $i < $metas->length; $i++)
-	{
-		$meta = $metas->item($i);
-		if($meta->getAttribute('name') == 'csrf_id')
-			$csrf_id = $meta->getAttribute('content');
-	}
-
-	echo "csrf_id: $csrf_id";
 ?>
